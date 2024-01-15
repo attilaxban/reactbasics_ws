@@ -1,0 +1,82 @@
+###
+GET http://localhost:4000/
+
+###
+GET http://localhost:4000/api/v2/languages
+
+###
+GET http://localhost:4000/api/v2/languages/12
+
+###
+GET http://localhost:4000/api/v2/languages/123
+
+###
+POST http://localhost:4000/api/v2/languages/
+Content-Type: application/json
+
+{
+  "langid": 12,
+  "name": "BASIC",
+  "dob": 1964,
+  "github23_pr": 1.0,
+  "github23_stars": 1.0,
+  "designer": "John F. Kemeny, Thomas E. Kurtz",
+  "maintainer": "",
+  "logo": ""
+}
+
+###
+DELETE http://localhost:4000/api/v2/languages/12
+
+###
+PUT http://localhost:4000/api/v2/languages/12
+Content-Type: application/json
+
+{
+  "name": "-",
+  "dob": "-",
+  "github23_pr": 0.0,
+  "github23_stars": 0.0,
+  "designer": "-",
+  "maintainer": "-",
+  "logo": "-"
+}
+
+###
+PATCH http://localhost:4000/api/v2/languages/12
+Content-Type: application/json
+
+{
+
+  "logo": "https://openclipart.org/image/800px/272343"
+}
+
+###
+GET http://localhost:4000/api/v2/languages/?search=ja
+
+###
+GET http://localhost:4000/api/v2/languages/?search=eich
+
+###
+GET http://localhost:4000/api/v2/languages/?search=microsoft
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=name&dir=asc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=name&dir=desc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=dob&dir=asc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=dob&dir=desc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=github23_stars&dir=asc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=github23_stars&dir=desc
+
+###
+GET http://localhost:4000/api/v2/languages/?orderBy=github23_stars&dir=desc&search=ja
